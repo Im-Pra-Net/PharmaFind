@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>PharmaFind | Home</title>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'home.css' %}">
+        {% load static %}
+        <link rel="icon" type="image/x-icon" href="{% static 'favicon.png' %}">
+    </head>
+    <body>
+        <div id="topbar2">
+            {% if user.is_authenticated %}
+                {% if user.pharmacymanager %}
+                    <p align="right" class="links"><a href="{% url 'home' %}">Home</a>&emsp;Sign up&emsp;<a href="{%url 'pharmamanage' %}">Manage pharmacies</a>&emsp;<a href="{% url 'logout' %}">Logout</a></p>
+                {% else %}
+                    <p align="right" class="links"><a href="{% url 'home' %}">Home</a>&emsp;Sign up&emsp;<a href="{% url 'logout' %}">Logout</a></p>
+                {% endif %}
+            {% else %}
+                <p align="right" class="links"><a href="{% url 'home' %}">Home</a>&emsp;Sign up&emsp;<a href="{% url 'login' %}">Login</a></p>
+            {% endif %}
+            <p align="left" id="version"><small><small>Version 1.0.0 (Prototype)</small></p>
+        </div>
+        <div id="intro">
+            <h1 align="center"><br>{% load static %}<img src="{% static 'favicon128.png' %}"><br>Pharmafind<br></h1>
+            <h3 align="center">Find your medicines, fast<br><br><br></h3>
+        </div>
+        <h2 class="pink" align="center">What medicine do you need?</h2>
+        <h4 class="purple" align="center">NOTE: Please only enter one of the generic drug name and the brand name, our search engine does not support multiple words yet.</h4>
+        <form align="center">
+            {% csrf_token %}
+            {{form}}
+            <br>
+            <br>
+            <input type="submit" value="Search" class="searchbutton">
+        </form>
+        <p align="right" class="white">By Im-Pra Net (Praveen Athauda-Arachchi and Imadh Mashoor</p>
+    </body>
+</html>

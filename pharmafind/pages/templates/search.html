@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <title>PharmaFind | Search | "{{query}}"</title>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'home.css' %}">
+        {% load static %}
+        <link rel="icon" type="image/x-icon" href="{% static 'favicon.png' %}">
+    </head>
+    <body>
+        <div id="topbar">
+            {% if user.is_authenticated %}
+                {% if user.pharmacymanager %}
+                    <p align="right" class="links"><a href="{% url 'home' %}">Home</a>&emsp;Sign up&emsp;<a href="{%url 'pharmamanage' %}">Manage pharmacies</a>&emsp;<a href="{% url 'logout' %}">Logout</a></p>
+                {% else %}
+                    <p align="right" class="links"><a href="{% url 'home' %}">Home</a>&emsp;Sign up&emsp;<a href="{% url 'logout' %}">Logout</a></p>
+                {% endif %}
+            {% else %}
+                <p align="right" class="links"><a href="{% url 'home' %}">Home</a>&emsp;Sign up&emsp;<a href="{% url 'login' %}">Login</a></p>
+            {% endif %}
+            <h3 align="center" class="white"> {% load static %}<img src="{% static 'favicon32.png' %}">Pharmafind</h3>
+            <p align="left" id="version"><small><small>Version 1.0.0 (Prototype)</small></p>
+        </div>
+        <form align="center">
+            {% csrf_token %}
+            {{form}}
+            <br>
+            <br>
+            <input type="submit" value="Search" class="searchbutton">
+        </form>
+        {% if area %}
+            {% if weight %}
+                <h3 class="white">You searched for "{{query}}" with a strength of {{weight}}mg in {{area}}.</h2>
+            {% else %}
+                <h3 class="white">You searched for "{{query}}" with any strength in {{area}}.</h2>
+            {% endif %}
+        {% else %}
+            {% if weight %}
+                <h3 class="white">You searched for "{{query}}" with a strength of {{weight}}mg.</h2>
+            {% else %}
+                <h3 class="white">You searched for "{{query}}" with any strength.</h2>
+            {% endif %}
+        {% endif %}
+        <br><br>
+        {% if hasresults %}
+            {% for drugset in results %}
+                <a href="{% url 'medicineview' %}?id={{drugset.id}}" style="text-decoration:none">
+                    <div class="pharmacy">
+                        <h4 class="white">{{drugset.pharmacy}}</h4>
+                        <h5 class="white">Has {{drugset.drug}}</h5>
+                        {% if drugset.count != 0 %}
+                            <h5 class="white">{{drugset.count}} in stock</h5>
+                        {% else %}
+                            <h4  class="important">Out of stock</h4>
+                        {% endif %}
+                    </div>
+                </a>
+                <br><br>
+            {% endfor %}
+        {% else %}
+        <h2 class="important" align="center">No results found.</h2>
+        <p class="pink" align="center">Please check the spelling of the search.<br><br>Also please note that our search engine does not support multiple words<br>yet, so please enter only one of the generic drug name and the brand.</p>
+        {% endif %}
+    </body>
+</html>

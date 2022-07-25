@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   sodipodi:docname="favicon.svg"
+   inkscape:export-filename="C:\Users\acer\Documents\Praveen - Coding\Python\django\pharmafind\pages\templates\favicon.png"
+   inkscape:export-xdpi="7.389091"
+   inkscape:export-ydpi="7.389091"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="2.2225"
+     inkscape:cx="396.85039"
+     inkscape:cy="-88.63892"
+     inkscape:window-width="2560"
+     inkscape:window-height="1529"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <circle
+       style="fill:#ffffff;stroke-width:4.7482;stroke-linecap:round;stroke-linejoin:round"
+       id="path1288"
+       cx="25"
+       cy="25"
+       r="25" />
+    <rect
+       style="fill:#ff5555;stroke-width:4.77804;stroke-linecap:round;stroke-linejoin:round"
+       id="rect1220"
+       width="37.5"
+       height="7.5"
+       x="6.25"
+       y="-28.75"
+       transform="rotate(90)" />
+    <rect
+       style="fill:#ff5555;stroke-width:4.77804;stroke-linecap:round;stroke-linejoin:round"
+       id="rect1450"
+       width="37.5"
+       height="7.5"
+       x="-43.75"
+       y="-28.750002"
+       transform="scale(-1)" />
+    <g
+       id="g3286"
+       transform="matrix(1.2634573,0,0,1.2920158,-3.2589328,-14.08425)">
+      <path
+         id="circle2800"
+         style="fill:#cea700;fill-opacity:1;stroke-width:3.51638;stroke-linecap:round;stroke-linejoin:round"
+         d="m 21.539977,27.248664 a 10.549106,10.549106 0 0 0 -0.612508,14.906087 10.549106,10.549106 0 0 0 14.906395,0.612226 10.549106,10.549106 0 0 0 0.611917,-14.906112 10.549106,10.549106 0 0 0 -14.905804,-0.612201 z m 1.641098,1.781676 a 8.1266487,8.1266487 0 0 1 11.48303,0.471623 8.1266487,8.1266487 0 0 1 -0.47134,11.483336 8.1266487,8.1266487 0 0 1 -11.48362,-0.471646 8.1266487,8.1266487 0 0 1 0.47193,-11.483313 z" />
+      <circle
+         style="fill:#00001f;fill-opacity:0.75;stroke-width:2.70888;stroke-linecap:round;stroke-linejoin:round"
+         id="path1496"
+         cx="-2.6176941"
+         cy="45.184433"
+         r="8.1266489"
+         transform="rotate(-42.64811)" />
+      <rect
+         style="fill:#cea700;fill-opacity:1;stroke-width:4.4607;stroke-linecap:round;stroke-linejoin:round"
+         id="rect3188"
+         width="3.059325"
+         height="15.37507"
+         x="-3.96503"
+         y="53.668953"
+         transform="rotate(-42.64811)" />
+    </g>
+  </g>
+</svg>

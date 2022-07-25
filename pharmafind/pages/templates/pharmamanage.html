@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <title>PharmaFind | Manage pharmacies</title>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'home.css' %}">
+        {% load static %}
+        <link rel="icon" type="image/x-icon" href="{% static 'favicon.png' %}">
+    </head>
+    <body>
+        <div id="topbar">
+            {% if user.is_authenticated %}
+                {% if user.pharmacymanager %}
+                    <p align="right" class="links"><a href="{% url 'home' %}">Home</a>&emsp;Sign up&emsp;<a href="{%url 'pharmamanage' %}">Manage pharmacies</a>&emsp;<a href="{% url 'logout' %}">Logout</a></p>
+                {% else %}
+                    <p align="right" class="links"><a href="{% url 'home' %}">Home</a>&emsp;Sign up&emsp;<a href="{% url 'logout' %}">Logout</a></p>
+                {% endif %}
+            {% else %}
+                <p align="right" class="links"><a href="{% url 'home' %}">Home</a>&emsp;Sign up&emsp;<a href="{% url 'login' %}">Login</a></p>
+            {% endif %}
+            <h3 align="center" class="white"> {% load static %}<img src="{% static 'favicon32.png' %}">Pharmafind</h3>
+            <p align="left" id="version"><small><small>Version 1.0.0 (Prototype)</small></p>
+        </div>
+        {% if user.pharmacymanager %}
+            <h2 class="white">Manage your pharmacies</h2>
+            <h4 class="important">NOTE: The settings will only be added in a later version when pharmacies actually register with our app.</h4>
+            {% for pharmacy in user.pharmacymanager.pharmacy_set.all %}
+                <button type="button" class="collapsible" id="coll">{{pharmacy}}</button>
+                <div class="content">
+                    {% for drugset in pharmacy.drugset_set.all %}
+                    <button type="button" class="collapsible" id="coll2">{{drugset}}</button>
+                    <div class="content2">
+                        <p class="white">This setting is incomplete and will be added in later versions.</p>
+                    </div>
+                    <br><br>
+                    {% endfor %}
+                </div>
+                <br><br>
+            {% endfor %}
+        {% else %}
+            <h2 class="important">Error: You are not a pharmacy manager.</h2>
+            <h3 class="white"><a href="{% url 'home' %}">Back to home page</a></h3>
+        {% endif %}
+        <script>
+            var coll = document.getElementsByClassName("collapsible");
+            var i;
+
+            for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                content.style.display = "none";
+                } else {
+                content.style.display = "block";
+                }
+            });
+            }
+        </script>
+    </body>
+</html>

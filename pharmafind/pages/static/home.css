@@ -1,0 +1,195 @@
+* {
+    font-family:'Lucida Sans';
+}
+
+body {
+    background-color: rgb(29, 7, 66);
+}
+
+.pink {
+    color:pink;
+}
+
+.greypink {
+    color:rgb(160, 113, 122);
+}
+
+.purple {
+    color:rgb(188, 155, 255)  
+}
+
+.important {
+    color:crimson;
+}
+
+h1 {
+    font-size:72px;
+}
+
+h2 {
+    font-size:48px;
+}
+
+h3 {
+    font-size:36px;
+}
+
+h4 {
+    font-size:24px;
+}
+
+h5 {
+    font-size:18px;
+}
+
+.white {
+    color:white;
+}
+
+#topbar {
+    background: url('pills.png') rgba(0, 0, 0, 0.6);
+    background-blend-mode: multiply;
+    background-size:cover;
+}
+
+#intro {
+    background: url('pills.png') rgba(0, 0, 0, 0.6);
+    background-blend-mode: multiply;
+    background-size:cover;
+    color:white;
+}
+
+#topbar2 {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+a {
+    color: pink;
+}
+
+.links {
+    color:rgb(132, 108, 112);
+}
+
+#version {
+    color:lightgrey;
+}
+
+input[type="text"].searchbox {
+    font-size:40px;
+}
+
+input[type="text"] {
+    background-color:darkslateblue;
+    color:white;
+}
+
+label {
+    color:white;
+}
+
+input[type="submit"] {
+    background-color:crimson;
+    border-radius:15px;
+    border-width:2px;
+    border-style:solid;
+    border-color: darkred;
+    color:rgb(47, 0, 0);
+}
+
+input[type="submit"]:hover {
+    background-color:darkred;
+    border-color:maroon;
+}
+
+.searchbutton {
+    font-size:40px;
+}
+
+.size24 {
+    font-size:24px;
+}
+
+.loginbutton {
+    font-size:24px;
+}
+
+.onepage {
+    height:100%;
+    margin:0;
+}
+
+#loginhead {
+    height:275px;
+}
+
+#loginbox {
+    height: calc(100% - 275px);
+}
+
+#loginform {
+    background-color: rgb(28, 6, 76);
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+    border:10px solid indigo;
+    padding:10px;
+}
+
+.pharmacy {
+    background-color: rgba(56, 2, 27, 0.759);
+    padding:50px;
+    box-sizing:border-box;
+}
+
+.pharmacy:hover {
+    background-color: rgba(90, 12, 49, 0.759);
+}
+
+#coll {
+    background-color:rgb(109, 0, 38);
+    color:white;
+    cursor:pointer;
+    padding:20px;
+    width:100%;
+    border:none;
+    text-align:left;
+    outline:none;
+    font-size:24px;
+}
+
+#coll2 {
+    background-color:#804f59;
+    color:white;
+    cursor:pointer;
+    padding:10px;
+    width:100%;
+    border:none;
+    text-align:left;
+    outline:none;
+    font-size:20px;
+}
+
+
+.active, #coll:hover {
+    background-color: rgb(138, 69, 94);
+}
+
+.active, #coll2:hover {
+    background-color: #916870;
+}
+
+.content {
+    padding: 20px;
+    display: none;
+    overflow: hidden;
+    background-color: #6e4049;
+}
+
+.content2 {
+    padding: 20px;
+    display: none;
+    overflow: hidden;
+    background-color: #8c5560;
+}
